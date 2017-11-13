@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       searchResults: [
-        {name: '', artist: '', album: '', id: 1},
+        {name: 'a', artist: 'b', album: 'c', id: 1},
         {name: '', artist: '', album: '', id: 2},
         {name: '', artist: '', album: '', id: 3},
       ],
@@ -27,7 +27,7 @@ class App extends React.Component {
 
 
 addTrack(track) {
-  let tracks = this.state.playListTracks;
+  let tracks = this.state.playlistTracks;
   if (!tracks.includes(track.id)) {
     tracks.push(track.id);
     }
@@ -37,7 +37,7 @@ addTrack(track) {
 }
 
 removeTrack(track) {
-    let tracks = this.state.playListTracks;
+    let tracks = this.state.playlistTracks;
     if (tracks.includes(track.id)) {
       let position = tracks.indexOf(track.id);
       tracks.splice(position, 1);

@@ -12,6 +12,7 @@ class App extends React.Component {
         {name: '', artist: '', album: ''},
         {name: '', artist: '', album: ''},
         {name: '', artist: '', album: ''},
+        {name: '', artist: '', album: ''}
       ],
       playlistName: 'Jammming Playlist',
       playlistTracks: [

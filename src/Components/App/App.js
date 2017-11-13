@@ -32,7 +32,7 @@ addTrack(track) {
     tracks.push(track.id);
     }
   this.setState({
-    playListTracks: tracks
+    playlistTracks: tracks
   })
 }
 
@@ -43,7 +43,7 @@ removeTrack(track) {
       tracks.splice(position, 1);
     }
     this.setState({
-      playListTracks: tracks
+      playlistTracks: tracks
     })
 }
 

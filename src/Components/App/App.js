@@ -38,10 +38,14 @@ addTrack(track) {
 
 removeTrack(track) {
     let tracks = this.state.playlistTracks;
-    if (tracks.includes(track.id)) {
-      let position = tracks.indexOf(track.id);
-      tracks.splice(position, 1);
-    }
+    tracks = tracks.filter(currTrack => {
+      if (currTrack.id === track.id) {
+        return false;
+      }
+      else {
+        return true;
+      }
+    })
     this.setState({
       playlistTracks: tracks
     })
